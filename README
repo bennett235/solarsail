@@ -1,0 +1,7 @@
+Repo contains various files to calculate and plot solar sail calculations
+
+mars_transit.py: computes instantaneous acceleration for a craft with a defined sail area and mass from a distance of 1AU (earth) to 1.524 AU (mars)
+
+orbit_cartoon.py: computes and plots a simplified trajectory from earth orbit to mars orbit 
+
+a_v_solve.py: (incomplete) numerical solver for force f(time) ODE
