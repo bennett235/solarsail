@@ -112,15 +112,16 @@ def solve_area(m=5):
         orbit=iterate_orbit(area=a,m=m)
         return 1e6*(orbit["velocity_t"][0]-orbit["velocity_t"][359])**2
     
-    optarea=minimize(ss,32,method="Nelder-Mead")
+    #optarea=minimize(ss,32,method="Nelder-Mead")
+    optarea=minimize(ss,32)
     print(optarea)
     return optarea["x"][0]
    
 def plot_radius(df):
     plt.plot(df["theta"]/np.pi,df["r"]/1000)
-    plt.xlabel("Orbit Angle [radians]")
+    plt.xlabel("Orbit Angle [pi*radians]")
     plt.ylabel("Orbit Radius [km]")
-   
+    plt.title("Orbital Radius")
     plt.show()
 
 
